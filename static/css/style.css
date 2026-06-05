@@ -348,7 +348,7 @@ header {
   font-weight: 700;
   margin: 0 0 10px;
   text-align: center;
-  color: #333; */
+  color: #333;
 }
 
 .span-portfolio-item {
@@ -420,10 +420,8 @@ header {
 }
 .status-bar.in-progress {
   background-color: #ffc107;
-
 }
 .status-bar.not-started-yet {
-
   background-color: #dc3545;
 }
 
