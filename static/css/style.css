@@ -103,7 +103,6 @@ header {
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: #222831;
-  /* color: #666; */
 }
 
 .btn-primary,
@@ -145,6 +144,49 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: underline;
+}
+
+/* About Me Section styling */
+.about-section {
+  padding: 4rem 5rem;
+  background-color: #00acb534;
+  margin: auto;
+}
+
+.about-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-decoration: underline;
+}
+
+.about-section h1 .span {
+  color: #00adb5;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 300px;
+  border-radius: 30px;
+  order: 10;
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about-text p {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* Footer Section styling*/
