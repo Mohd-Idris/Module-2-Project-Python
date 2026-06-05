@@ -1,1 +1,36 @@
-{% extends "base.html" %} {% block content %} {% endblock %}
+{% extends "base.html" %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1>
+        <span class="span">B</span>uilding <span class="span">Y</span>our
+        <span class="span">W</span>ebsite with a <span class="span">B</span>est
+        <span class="span">D</span>esign <span class="span">C</span>ompany
+      </h1>
+      <p>
+        Create stunning web experience with clean layouts and modern technology.
+        Our platform helps you scale faster than ever.
+      </p>
+      <a href="{{ url_for('about') }}" class="btn-primary"
+        >Learn More about Me</a
+      >
+
+      <!-- <div class="hero-buttons">
+        <a href="#" class="btn-primary">Start Now</a>
+        <a href="#" class="btn-secondary">Learn More</a>
+      </div> -->
+    </div>
+    <div class="hero-image">
+      <!-- <img src="https://placehold.co/600x400" alt=""> -->
+      <img
+        src="{{ url_for('static', filename='images/Me-Profile-small.png')}}"
+        alt="An image"
+        class="hero-image-profile"
+      />
+    </div>
+  </div>
+</section>
+
+{% block content %} {% endblock %}
