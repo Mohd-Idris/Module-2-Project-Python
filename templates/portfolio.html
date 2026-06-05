@@ -1,1 +1,63 @@
-{% extends "base.html" %} {% block content %} {% endblock %}
+{% extends "base.html" %} {% block content %} {% extends "base.html" %} {% block
+content %}
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header">
+      <h1>
+        <!-- <i class="fa-solid fa-briefcase"></i> -->
+        My<span class="span">Portfolio</span>
+      </h1>
+      <p class="portfolio-text">
+        Here are some of the projects I have worked on. Click on the "View More"
+        button to see more details about each project.
+      </p>
+    </div>
+    <div class="portfolio-cards">
+      {% for portfolio in portfolios %}
+      <div class="item">
+        <img
+          src="{{ url_for('static', filename='images/' + portfolio.image) }}"
+          alt="{{ portfolio.title }} image"
+        />
+
+        <div class="item-content">
+          <h3>
+            <span class="span-portfolio-item">{{ portfolio.title }}</span>
+          </h3>
+          <p>{{ portfolio.description }}</p>
+
+          {% if portfolio.status == 'Completed' %}
+          <span class="status-bar completed">{{ portfolio.status }}</span>
+
+          {% elif portfolio.status == 'In Progress' %}
+          <span class="status-bar in-progress">{{ portfolio.status }}</span>
+
+          {% elif portfolio.status == 'Not Started Yet' %}
+          <span class="status-bar not-started-yet">{{ portfolio.status }}</span>
+
+          {% else %}
+          <span class="status-bar zero" style="background-color: #ccc"
+            >No Status yet</span
+          >
+          {% endif %} {% if portfolio.class == 'None' %}
+          <a
+            href="{{ portfolio.link }}"
+            target="_blank"
+            class="btn-portfolio-disabled"
+            >View More</a
+          >
+          {% else %}
+          <a href="{{ portfolio.link }}" target="_blank" class="btn-portfolio"
+            >View More</a
+          >
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
