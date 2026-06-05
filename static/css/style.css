@@ -7,7 +7,6 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  /* color: #eeeeee; */
 }
 
 /* Scrolling behaviour styling - when you navigate from section to another */
@@ -46,7 +45,6 @@ header {
   font-weight: bold;
   text-decoration: none;
   color: #eeeeee;
-  /* color: #EEEEEE; */
 }
 
 .span {
@@ -77,6 +75,54 @@ header {
   font-weight: 500;
   color: #00adb5;
   text-decoration: underline;
+  transition: 0.3s all ease;
+  transform: scale(1.02);
+}
+
+/* Footer Section styling*/
+
+footer {
+  background-color: #222831;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer * {
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-links a,
+.footer-links p {
+  color: rgb(187, 187, 187);
+}
+
+.footer-links p i {
+  color: #00adb5;
+}
+
+.footer-links a:hover {
+  font-weight: 500;
+  color: #00adb5;
+  text-decoration: underline;
+  transition: 0.3s all ease;
+  transform: scale(1.02);
+}
+
+.social-icons {
+  font-size: 2rem;
+  border: none;
+  margin-top: 10px;
+}
+
+.social-icons i:hover {
+  color: #00adb5;
   transition: 0.3s all ease;
   transform: scale(1.02);
 }
