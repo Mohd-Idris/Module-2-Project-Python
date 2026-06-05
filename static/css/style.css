@@ -295,6 +295,138 @@ header {
   width: 0% !important;
 }
 
+/* Portfolio Section styling */
+
+.portfolio {
+  background-color: #00acb534;
+  padding: 4rem 5rem;
+}
+
+.portfolio h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.portfolio-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #eee;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.portfolio .item {
+  background-color: #393e46;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.portfolio .item:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px #00adb5;
+}
+
+.portfolio .portfolio-cards .item .item-content {
+  color: #eee;
+  padding: 20px 15px 30px;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio .portfolio-cards h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-align: center;
+  color: #333; */
+}
+
+.span-portfolio-item {
+  background: linear-gradient(to left, #00adb5, #eeeeee24);
+}
+
+.portfolio .portfolio-cards p {
+  line-height: 1.7;
+  font-weight: 400;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.portfolio img {
+  max-width: 100%;
+  padding: 0.8rem;
+}
+
+.portfolio .portfolio-cards .item-content .btn-portfolio {
+  background: linear-gradient(to left, #00adb5, #222831);
+  color: #fff;
+  padding: 8px 30px;
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-portfolio:hover {
+  transform: scale(1.1);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* Portfolio disabled-button styling  */
+
+.btn-portfolio-disabled {
+  background: linear-gradient(to right, #eeeeee, #393e46);
+  color: #fff;
+  padding: 8px 30px;
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: not-allowed;
+  display: inline-block;
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.status-bar.completed {
+  background-color: #28a745;
+}
+.status-bar.in-progress {
+  background-color: #ffc107;
+
+}
+.status-bar.not-started-yet {
+
+  background-color: #dc3545;
+}
+
 /* Footer Section styling*/
 
 footer {
