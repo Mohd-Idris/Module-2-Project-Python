@@ -18,7 +18,7 @@ html {
 /* any container should have these rules */
 
 .container {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: auto;
   padding: 0 2rem;
 }
@@ -28,7 +28,7 @@ html {
 }
 
 /* Header Styling  */
-header {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -536,6 +536,13 @@ textarea {
   list-style-type: circle;
 }
 
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
 /* Footer Section styling*/
 
 footer {
@@ -582,4 +589,33 @@ footer * {
   color: #00adb5;
   transition: 0.3s all ease;
   transform: scale(1.02);
+}
+
+/* Tablets Responsive */
+
+@media (max-width: 768px) {
+  /* Navigation and Links Styling */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+  /* .logo a {
+    margin: 0 auto;
+  } */
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  /* Hero Section Styling */
 }

@@ -29,19 +29,21 @@
   <body>
     <!-- Navigation Links Section -->
     <header id="home">
-      <div class="logo">
-        <a href="{{ url_for('home')}}">My<span class="span">Design</span></a>
-      </div>
-      <div class="nav-bar">
-        <nav>
-          <ul class="nav-link">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('skills') }}">Skills</a></li>
-            <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact Me</a></li>
-          </ul>
-        </nav>
+      <div class="container">
+        <div class="logo">
+          <a href="{{ url_for('home')}}">My<span class="span">Design</span></a>
+        </div>
+        <div class="nav-bar">
+          <nav>
+            <ul class="nav-link">
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('skills') }}">Skills</a></li>
+              <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
