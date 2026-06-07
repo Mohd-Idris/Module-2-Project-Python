@@ -83,6 +83,7 @@ my_portfolio = [
         "status": "Not Started Yet",
         "class": "None"
     }
+    # These data will be used when you want to test the card on the browser
     # {
     #     "title": "C# Project",
     #     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veniam.",

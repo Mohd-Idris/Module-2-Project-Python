@@ -670,4 +670,36 @@ footer * {
     max-width: 280px;
     margin: auto;
   } */
+
+  /* About page  */
+
+  .about-section .h1-about-me {
+    /* font-size: 30px; */
+    font-size: 1.8rem;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-container .about-img {
+    justify-content: center;
+  }
+
+  .about-container .about-text h2 {
+    /* font-size: 25px; */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .about-container .about-text p {
+    font-size: 1rem;
+    /* text-align: center; */
+    text-align: justify;
+    margin-top: 10px;
+    /* letter-spacing: 0.1px; */
+  }
 }
