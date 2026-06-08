@@ -135,18 +135,21 @@ def contact():
         name = request.form.get('name', '').strip()
         email = request.form.get('email', '').strip()
         message = request.form.get('message', '').strip()
+        subject = request.form.get('subject', '').strip()
 
         error_messages = []
         if not name:
             error_messages.append("Name is required.")
         if not email:
             error_messages.append("Email is required.")
+        if not subject:
+            error_messages.append("Subject is required.")
         if not message:
             error_messages.append("Message is required.")       
 
         if error_messages:
             return render_template(
-                "contact.html", title="Contact Us Page", errors=error_messages, name=name, email=email, message=message
+                "contact.html", title="Contact Us Page", errors=error_messages, name=name, email=email, message=message, subject=subject
                 )
 
 
@@ -154,7 +157,7 @@ def contact():
         return redirect('/contact')
 
     return render_template(
-        'contact.html', title='Contact Us Page', error_messages =[], name="", email="", message=""
+        'contact.html', title='Contact Us Page', error_messages =[], name="", email="", message="", subject=""
     )
 
 if __name__ == '__main__':

@@ -445,6 +445,21 @@ html {
   text-align: center;
   margin: 0 auto 40px;
   color: #222831;
+
+
+    text-align: left;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: 1.5;
+  
+}
+
+form{
+  /* width: 300px; */
+}
+
+.bold {
+  font-weight: 600;
 }
 .contact .contact-content {
   margin-top: 4rem;
@@ -454,9 +469,11 @@ html {
   padding: 2rem 3rem;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px #3f4e4f;
+  /* width: 100%; */
 }
 
 .contact .contact-content input,
+select,
 textarea {
   display: block;
   width: 100%;
@@ -466,6 +483,17 @@ textarea {
   border: 1px solid #bbb;
   border-radius: 5px;
   outline: none;
+}
+
+input:focus {
+  background-color: #e01c1c;
+}
+
+select {
+  text-align: center;
+}
+.form-element:focus {
+  background-color: #e01c1c;
 }
 
 .contact .contact-content .btn-contactMe {
@@ -532,12 +560,16 @@ textarea {
 
 .contact-error {
   background-color: rgb(206, 200, 200);
+  width: fit-content;
   color: red;
-  padding: 30px 20px;
+  padding: 20px;
   border-radius: 5px;
   text-align: center;
   margin-bottom: 20px;
-  list-style-type: circle;
+}
+
+.contact-error li {
+  list-style-type: disc;
 }
 
 .error {
@@ -775,5 +807,18 @@ footer * {
     text-align: left;
     letter-spacing: normal;
     word-spacing: normal;
+  }
+
+  /* Contact Me Page */
+
+  .contact h1 {
+    font-size: 1.8rem;
+  }
+  .contact-me-text {
+    font-size: 1rem;
+
+  .contact .contact-content {
+    margin-top: 2rem;
+    /* font-size:; */
   }
 }

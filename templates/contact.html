@@ -16,9 +16,9 @@
       </h1>
       <p class="contact-me-text">
         If you have any questions, inquiries, or would like to discuss potential
-        collaborations, please feel free to reach out to me. <br />I am always
-        open to connecting with like-minded individuals and exploring new
-        opportunities.
+        collaborations, please feel free to reach out to me. I am always open to
+        connecting with <span class="bold">like-minded</span> individuals and
+        exploring new opportunities.
       </p>
     </div>
 
@@ -41,8 +41,27 @@
         </label>
 
         <label
+          >Subject
+          <select name="subject" id="subject" class="form-element">
+            <option value="">-- Choose Subject --</option>
+            <option>Genaral inquiry</option>
+            <option>Job Opportunity</option>
+            <option>Meeting with Employer</option>
+            <option>Meeting with Client</option>
+            <option>Meeting with Client</option>
+            <option>Mend Feeback</option>
+          </select>
+        </label>
+
+        <label
           >Message
-          <textarea name="message" id="message" cols="30" rows="10">
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            class="form-element"
+          >
 {{ message }}</textarea
           >
           {% if errors %}
