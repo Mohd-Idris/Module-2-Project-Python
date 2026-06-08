@@ -446,17 +446,15 @@ html {
   margin: 0 auto 40px;
   color: #222831;
 
-
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: 1.5;
-  
+  text-align: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: 1.5;
 }
 
-form{
-  /* width: 300px; */
-}
+/* form{
+
+} */
 
 .bold {
   font-weight: 600;
@@ -816,7 +814,7 @@ footer * {
   }
   .contact-me-text {
     font-size: 1rem;
-
+  }
   .contact .contact-content {
     margin-top: 2rem;
     /* font-size:; */
