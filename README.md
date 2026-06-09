@@ -44,10 +44,12 @@ I utilized these professional tools to enhance the UI/UX:
 
 • Color Hunt: For selecting the professional color palette.
 
-📱 Responsive Design (Breakpoints)
+## 📱 Responsive Design (Breakpoints)
 
 The website is optimized for different screen sizes using the following CSS strategy:
+
 • Tablet View: Optimized for screens with a max-width: 768px.
+
 • Mobile View: Optimized for screens with a max-width: 528px.
 
 # 📁 Project Structure
