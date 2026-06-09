@@ -125,13 +125,17 @@ html {
   background: linear-gradient(to left, #00adb5, #222831);
   text-transform: uppercase;
 }
-
+/* .hero-image {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+} */
 .hero-image img {
   width: 60vh;
   height: 50vh;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  object-fit: fill;
+  /* object-fit: fill; */
 }
 
 /* .header-content img {
@@ -212,11 +216,12 @@ html {
 .skills-section .skills-content .skills-cards {
   align-content: center;
   justify-content: center;
-  color: white;
+  /* color: white; */
+  color: #393e46;
 }
 
 .skills-section .skills-content .skills-cards .item {
-  background-color: #222831;
+  background-color: #00acb587;
   margin: 20px;
   padding: 1rem;
   width: 300px;
@@ -227,7 +232,7 @@ html {
 }
 
 .skills-section .skills-content .skills-cards .item:hover {
-  box-shadow: 5px 5px #00adb5;
+  box-shadow: 5px 5px #365486;
 }
 .skills-section img {
   width: 150px;
@@ -266,7 +271,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  /* color: #fff; */
+  color: #393e46;
   font-weight: 600;
   text-align: center;
   border-radius: 15px;
@@ -501,9 +507,9 @@ textarea {
 select {
   text-align: center;
 }
-.form-element:focus {
+/* .form-element:focus {
   background-color: #e01c1c;
-}
+} */
 
 .contact .contact-content .btn-contactMe {
   background: linear-gradient(to left, #00adb5, #222831);
@@ -974,7 +980,7 @@ footer * {
     margin: 0 0 10px;
   }
   .portfolio .portfolio-cards .item-content p {
-    font-size: 0.8;
+    font-size: 0.9rem;
     height: 100px;
     width: 295px;
     line-height: 1.5;
