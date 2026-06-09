@@ -37,8 +37,11 @@ The goal of this project is to design and develop a responsive, accessible, and 
 I utilized these professional tools to enhance the UI/UX:
 
 • Google Font: For all textual contents in the website (Poppins Font).
+
 • Font Awesome: For scalable vector icons.
+
 • Flaticon: For high-quality graphic assets.
+
 • Color Hunt: For selecting the professional color palette.
 
 📱 Responsive Design (Breakpoints)
@@ -49,7 +52,7 @@ The website is optimized for different screen sizes using the following CSS stra
 
 # 📁 Project Structure
 
-'''
+```text
 FLASK-PROJECT/
 ├── static/ # Static assets
 │ ├── css/
@@ -66,7 +69,7 @@ FLASK-PROJECT/
 ├── .gitignore # Git ignored files/folders
 ├── app.py # Main Flask application
 └── requirements.txt # Exact package versions
-'''
+```
 
 # 📄 Pages
 
