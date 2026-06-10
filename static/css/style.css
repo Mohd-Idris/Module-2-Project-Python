@@ -21,6 +21,10 @@ html {
   /* max-width: 1100px; */
   margin: auto;
   padding: 0 2rem;
+
+  /* Added these two rules for proper centering */
+  width: 100%;
+  max-width: 1100px;
 }
 
 .fa-solid {
@@ -32,7 +36,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  width: 100%; /* Added the full width for better responsiveness */
+  padding: 20px 5%; /* Changed horizontal padding from 10% to 5% for better responsiveness */
   background: #222831;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -43,7 +48,7 @@ html {
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #eeeeee;
 }
 
@@ -66,9 +71,11 @@ html {
 
 .nav-link,
 .logo {
+  /* Removed the .logo  */
   display: flex;
   gap: 30px;
   align-items: center;
+  flex-wrap: wrap; /* Make the links wrapple */
 }
 
 .nav-link a {
@@ -86,19 +93,23 @@ html {
 
 /* Hero Section Styling */
 .hero-section {
-  padding: 80px 10%;
+  padding: 60px 5%; /* change horizontal padding from 10% to 5% and the vertical padding from 80px to 60px for better responsiveness */
   background-color: #00acb534;
-  height: 70vh;
+  width: 100%;
+  min-height: 70vh; /* change height property to min-height property and Added width: 100% for better responsiveness */
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px; /* change gap property value to 40px Added max-width: 1100px, and margin: 0 auto for better responsiveness */
+  max-width: 1100px;
+  margin: 0 auto;
   align-items: center;
 }
 .hero-content h1 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
+  font-size: clamp(2rem, 4vm, 3rem); /* Make the font size responsive */
   line-height: 1.2;
   margin-bottom: 20px;
   color: #222831;
@@ -112,10 +123,13 @@ html {
 
 .btn-primary,
 .btn-secondary {
+  display: inline-block; /* Added inline-block displaying  */
   background: #00adb5;
   padding: 12px 25px;
   border-radius: 5px;
   margin-right: 15px;
+  margin-bottom: 10px; /* Added margin bottom and center aligning */
+  text-align: center;
   color: #eee;
 }
 
@@ -131,11 +145,12 @@ html {
   align-items: center;
 } */
 .hero-image img {
-  width: 60vh;
-  height: 50vh;
+  width: 100%; /* Changed width from 60vh, height from 50vh, and added max-width to make it responsive on different screens, as well as chaned the object-fit to from fill to cover  */
+  max-width: 450px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  /* object-fit: fill; */
+  object-fit: cover;
 }
 
 /* .header-content img {
@@ -157,7 +172,7 @@ html {
 
 /* About Me Section styling */
 .about-section {
-  padding: 4rem 5rem;
+  padding: 4rem 5%; /* Changed horizontal padding from 5rem to 5% for better responsiveness */
   background-color: #00acb534;
   margin: auto;
 }
@@ -165,6 +180,7 @@ html {
 .about-section h1 {
   text-align: center;
   font-size: 2.5rem;
+  /* font-size: clamp(1.8rem, 3vm, 2.5rem); */ /* Make the font size responsive */
   margin-bottom: 3rem;
   text-decoration: underline;
 }
@@ -176,20 +192,25 @@ html {
 .about-container {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
-  gap: 1rem;
-  justify-content: center;
+  gap: 2rem; /* Make the gap bigger instead of 1rem , make it 2rem, added max-width and margin properties , also removed justify-content property */
+  max-width: 1100px;
+  margin: 0 auto;
+  /* justify-content: center; */
   align-items: center;
 }
 
 .about-img img {
-  width: 300px;
+  width: 100%; /* Changed width from 300px, added height and max-width to make it responsive on different screens, awa removed order property */
+  max-width: 300px;
+  height: auto;
   border-radius: 30px;
-  order: 10;
+  /* order: 10; */
 }
 
 .about-text h2 {
   margin-bottom: 1rem;
   color: #222;
+  /* font-size: clamp(1.3rem, 2vm, 1.8rem); */ /* Added the font size responsive */
 }
 
 .about-text p {
@@ -201,48 +222,15 @@ html {
 /* Skills Section styling */
 
 .skills-section {
-  padding: 4rem 5rem;
+  padding: 4rem 5%; /* Changed horizontal padding from 5rem to 5% for better responsiveness, Added width property */
+  width: 100%;
   background-color: #00acb534;
-}
-
-.skills-section .skills-content {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  text-align: center;
-}
-
-.skills-section .skills-content .skills-cards {
-  align-content: center;
-  justify-content: center;
-  /* color: white; */
-  color: #393e46;
-}
-
-.skills-section .skills-content .skills-cards .item {
-  background-color: #00acb587;
-  margin: 20px;
-  padding: 1rem;
-  width: 300px;
-  border-radius: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-}
-
-.skills-section .skills-content .skills-cards .item:hover {
-  box-shadow: 5px 5px #365486;
-}
-.skills-section img {
-  width: 150px;
-  object-fit: contain;
-  margin-bottom: 1rem;
 }
 
 .skills-section h1 {
   text-align: center;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(1.8rem, 3vm, 2.5rem); /* Added the font size responsive */
   margin-bottom: 0.5rem;
   text-decoration: underline;
 }
@@ -253,8 +241,57 @@ html {
 .skills-text {
   text-align: center;
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* Changed margin bottom value from 1.5 to 2rem */
+  max-width: 800px; /* Added the max-width, margin left and right properties responsive */
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
+}
+
+.skills-section .skills-content {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Added the gap , max-width, margin left and right properties responsive */
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+
+  /* align-items: center;
+  text-align: center; */
+}
+
+.skills-section .skills-content .skills-cards {
+  text-align: center; /* Added text align, and removed align content and justify content properties */
+  /* align-content: center;
+  justify-content: center; */
+  /* color: white; */
+  color: #393e46;
+}
+
+.skills-section .skills-content .skills-cards .item {
+  background-color: #00acb587;
+
+  margin: 0 auto; /* changed margin from 20px, and width from 300px, then added padding 1.5rem vertically 1rem horizontally ,max-width intead of width */
+  padding: 1.5rem 1rem;
+  width: 100%;
+  max-width: 300px;
+
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.skills-section .skills-content .skills-cards .item:hover {
+  box-shadow: 5px 5px #365486;
+}
+.skills-section img {
+  width: 100%; /* Added max-width and height , change width value from 150px to 100%*/
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 .progress-container {
@@ -274,10 +311,10 @@ html {
   /* color: #fff; */
   color: #393e46;
   font-weight: 600;
-  text-align: center;
+  /* text-align: center; */ /* remove this property */
   border-radius: 15px;
   transition: width 0.6s ease;
-  z-index: 9;
+  /* z-index: 9; */ /*remove this property */
 }
 
 .progress-bar.high {
@@ -310,12 +347,14 @@ html {
 
 .portfolio {
   background-color: #00acb534;
-  padding: 4rem 5rem;
+  padding: 4rem 5%; /* Changed horizontal padding from 5rem to 5% for better responsiveness, Added width property */
+  width: 100%;
 }
 
 .portfolio h1 {
   text-align: center;
   font-size: 2.5rem;
+  font-size: clamp(1.8rem, 3vm, 2.5rem); /* Added the font size responsive */
   margin-bottom: 0.5rem;
   text-decoration: underline;
 }
@@ -330,15 +369,21 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 4rem;
+  max-width: 1100px; /* Added max-width and margin */
+  margin: 4rem;
+  /* justify-content: center;*/ /* remove this property */
+  /*align-items: center; */ /* remove this property */
+  /*margin-top: 4rem; */ /* remove this property */
 }
 
 .portfolio .item {
   background-color: #393e46;
   border-radius: 25px;
   transition: all 0.3s ease;
+
+  height: 100%; /* Added height , display flex, and flex direction */
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio .item:hover {
@@ -346,18 +391,34 @@ html {
   box-shadow: 5px 5px #00adb5;
 }
 
+/* Added this rules to .portfolio img */
+.portfolio img {
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+/* The above block of code is just been created  */
+
 .portfolio .portfolio-cards .item .item-content {
   color: #eee;
   padding: 20px 15px 30px;
-  align-items: center;
+  /* align-items: center; */ /* remove this property */
   text-align: center;
+  /* Added these rules below */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  /* The above block of code is just been created  */
 }
 
 .portfolio .portfolio-cards h3 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px;
-  text-align: center;
+  /* text-align: center; */ /* remove this property */
   color: #eee;
 }
 
@@ -366,29 +427,33 @@ html {
 }
 
 .portfolio .portfolio-cards p {
+  font-size: 1rem; /* Added this property*/
   line-height: 1.7;
   font-weight: 400;
   padding: 0 10px;
   margin-bottom: 15px;
 }
 
-.portfolio img {
+/* remove this rule */
+/* .portfolio img {
   max-width: 100%;
   padding: 0.8rem;
-}
+} */
 
-.portfolio .portfolio-cards .item-content .btn-portfolio {
+.btn-portfolio {
+  /* remove this line .portfolio .portfolio-cards .item-content .btn-portfolio write this instead */
   background: linear-gradient(to left, #00adb5, #222831);
   color: #fff;
   padding: 8px 30px;
   margin-top: 30px;
   font-size: 14px;
-  text-align: center;
+  /* text-align: center; */ /* remove this rule */
   border: none;
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
   display: inline-block;
+  /* text-decoration: none; */ /* Add this */
 }
 
 .btn-portfolio:hover {
@@ -406,10 +471,10 @@ html {
   padding: 8px 30px;
   margin-top: 30px;
   font-size: 14px;
-  text-align: center;
+  /* text-align: center; */ /* remove this rule */
   border: none;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */ /* remove this rule */
   cursor: not-allowed;
   display: inline-block;
 }
@@ -421,9 +486,10 @@ html {
   padding: 5px 0;
   color: #fff;
   font-weight: 600;
-  text-align: center;
+  /* text-align: center; */ /* remove this rule */
   border-radius: 20px;
   text-transform: uppercase;
+  margin-bottom: 1rem; /* Add this rule */
 }
 .status-bar.completed {
   background-color: #28a745;
@@ -439,24 +505,30 @@ html {
 
 .contact {
   background-color: #00acb534;
-  padding: 4rem 0;
+  padding: 4rem 5%; /* Changed horizontal padding from 0 to 5% for better responsiveness, Added width property */
+  width: 100%;
 }
 
 .contact h1 {
   text-align: center;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(1.8rem, 3vm, 2.5rem); /* Added the font size responsive */
   margin-bottom: 0.5rem;
   text-decoration: underline;
 }
 .contact-me-text {
   text-align: center;
+  /*max-width: 850px;*/ /* Added max-width */
   margin: 0 auto 40px;
   color: #222831;
-
   text-align: left;
+  /* remove these rules */
+  /* text-align: left;
   letter-spacing: normal;
-  word-spacing: normal;
+  word-spacing: normal; */
+  /*  */
   line-height: 1.5;
+  font-size: 1.1rem; /* Add this */
 }
 
 /* form{
@@ -468,21 +540,22 @@ html {
 }
 
 .contact-container {
-  width: 1100px;
-  margin: auto;
+  width: 100%;
+  max-width: 1100px; /* Added max-width, change width value from 1100px to 100 and margin from auto to 0 auto %*/
+  margin: 0 auto;
   padding: 0 2rem;
 }
 .contact .contact-content {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0 2rem;
-  padding: 2rem 3rem;
+  gap: 2rem; /* Changed gap and padding values from 0 2rem, 2rem 3rem to 2rem both of them accordingly */
+  padding: 2rem;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #3f4e4f;
+  box-shadow: 5px 5px 5px 15px rgba(63, 78, 79, 0.2); /* Changed the color(#3f4e4f) and spead-radius value from 5px to 15px */
   background-color: white;
-  /* width: 800px;
-  justify-content: center;
+  width: 100%; /* Changed the width value from 800px to 100% */
+  /* justify-content: center;
   align-content: center;
   align-items: center; */
 }
@@ -492,12 +565,13 @@ select,
 textarea {
   display: block;
   width: 100%;
-  margin: 20px 0;
-  padding: 10px;
+  margin: 15px 0; /* Changed margin and padding values from 20px 12px to 15px 10px accordingly */
+  padding: 12px;
   background-color: #aaaaaa1f;
   border: 1px solid #bbb;
   border-radius: 5px;
   outline: none;
+  font-size: 1rem; /* Add this */
 }
 
 /* input:focus {
@@ -511,46 +585,52 @@ select {
   background-color: #e01c1c;
 } */
 
-.contact .contact-content .btn-contactMe {
+.btn-contactMe {
+  /* remove this line .contact .contact-content .btn-contactMe write this instead */
   background: linear-gradient(to left, #00adb5, #222831);
   color: #fff;
-  padding: 8px 30px;
-  margin-top: 30px;
+  padding: 12px 30px; /* Changed padding and margin-top values from 8px 30px to 12px 20px accordingly */
+  margin-top: 20px;
   font-size: 14px;
-  text-align: center;
+  /* text-align: center; */ /* remove this */
   border: none;
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
+  width: 100%; /* Add these two rules */
+  max-width: 200px;
 }
 
 .btn-contactMe:hover {
-  transform: scale(1.1);
-  font-weight: 500;
+  transform: scale(1.05); /* Changed the value from 1.1 to 1.05 */
+  /* font-weight: 500; */ /* remove this */
   text-transform: uppercase;
   text-decoration: underline;
 }
 
 .contact .contact-content img {
   width: 100%;
-  height: 100%;
-  align-content: center;
+  height: auto; /* Changed the height from 100% to auto */
+  /* align-content: center; */ /* remove this */
   object-fit: contain;
+  align-self: center; /* Add this */
 }
 
 .flash-message {
   background-color: #28a745;
   color: white;
-  margin-bottom: 20px;
+  margin: 0 auto 20px; /* Changed margin-bottom: 20px to margin: 0 auto 20px */
   text-align: center;
   padding: 0.5rem 1.2rem;
   border-radius: 30px;
   width: fit-content;
   position: sticky;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(
+    -50%
+  ); /* Changed transform: translate(-50%, -50%) to translateX(-50%) */
   animation: fadeOut 0.5s ease-in-out 5s forwards;
-  animation-delay: 5s;
+  /* animation-delay: 5s; */ /* remove this */
 }
 
 @keyframes fadeOut {
@@ -558,10 +638,10 @@ select {
     opacity: 1;
     visibility: visible;
   }
-  50% {
+  /* 50% {
     opacity: 0.5;
-    visibility: visible;
-  }
+    visibility: visible;  //remove this //
+  } */
   100% {
     opacity: 0;
     visibility: hidden;
@@ -574,32 +654,46 @@ select {
 }
 
 .contact-error {
-  background-color: rgb(206, 200, 200);
-  width: fit-content;
-  color: red;
+  background-color: rgb(
+    248,
+    215,
+    218
+  ); /* Changed the color(rgb(206, 200, 200)) and the color: red */
+  color: #721c24;
+  /* width: fit-content; */ /* remove this */
+
   padding: 20px;
   border-radius: 5px;
-  text-align: center;
+  text-align: left; /* Changed the text alight from center to left */
   margin-bottom: 20px;
+
+  /* Added these rules */
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  /*  */
 }
 
 .contact-error li {
   list-style-type: disc;
+  margin-left: 20px; /* Add this */
 }
 
 .error {
-  color: red;
+  color: #dc3545; /* Changed the color: red and the margin from -15 to -10 */
   font-size: 0.9rem;
   margin-top: -15px;
   margin-bottom: 15px;
+  display: block; /* Add this */
 }
 
 /* Footer Section styling*/
 
 footer {
   background-color: #222831;
-  padding: 20px 0;
+  padding: 2rem 5%; /* Changed the padding from 20px 0 */
   text-align: center;
+  width: 100%; /* Add this */
 }
 
 footer * {
@@ -609,8 +703,9 @@ footer * {
 .footer-links {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap; /* Add this */
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1rem; /* Change the value from 10px to 1rem */
 }
 
 .footer-links a,
@@ -632,21 +727,29 @@ footer * {
 
 .social-icons {
   font-size: 2rem;
-  border: none;
-  margin-top: 10px;
+  /* border: none; */ /* remove this */
+  margin-top: 1rem; /* Change the value from 10px to 1rem */
 }
+
+/* Add this rule */
+.social-icons a {
+  margin: 0 10px;
+}
+/*  */
 
 .social-icons i:hover {
   color: #00adb5;
   transition: 0.3s all ease;
-  transform: scale(1.02);
+  transform: scale(1.1); /* Changed the value from 1.02 to 1.1 */
 }
 
 /* Tablets Responsive */
 
 @media (max-width: 768px) {
   /* Navigation and Links Styling */
-  .header-container {
+
+  /* remove these rules */
+  /* .header-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -662,15 +765,26 @@ footer * {
   }
   .logo a {
     margin: 0 auto;
+  } */
+
+  /* Add these rule */
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
+    height: auto;
+    /*  */
   }
 
   .nav-link {
     justify-content: center;
+    gap: 15px; /* Add this */
   }
 
   /* Hero Section Styling */
 
-  .hero-container {
+  /* remove these rules */
+  /* .hero-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -683,6 +797,13 @@ footer * {
   .hero-content p {
     margin-bottom: 20px;
     font-size: 15px;
+  } */
+
+  /* Add these rules */
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    /*  */
   }
 
   .hero-container .hero-image {
@@ -691,25 +812,25 @@ footer * {
     width: 100%; */
 
     display: flex;
-    align-items: center;
+    /* align-items: center; */ /* remove this */
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */ /* remove this */
+    margin-top: 0.5rem; /* Add this */
   }
   .hero-container .hero-image img {
     max-width: 300px;
     /* width: 100%; */
-    height: 180px;
+    height: auto;
     /* align-items: center;
     align-content: center;
     justify-content: center; */
-    margin: auto;
-    margin-top: 20px;
+    /* margin: auto;
+    margin-top: 20px; */
     /* object-fit: contain; */
   }
-  .btn-primary {
-    width: fit-content;
+  /* .btn-primary {
     margin-bottom: 10px;
-  }
+  } */
   /* .header-content {
     grid-template-columns: 1fr;
   }
@@ -725,54 +846,70 @@ footer * {
 
   /* About page  */
 
+  .about-container {
+    /* display: flex;
+    flex-direction: column;
+    width: 100%; */ /* remove these rules */
+
+    /* Add these rules */
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
   .about-section .h1-about-me {
     /* font-size: 30px; */
     font-size: 1.8rem;
   }
 
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
+  /* Added these rules */
   .about-container .about-img {
+    display: flex;
     justify-content: center;
-  }
-
-  .about-container .about-text h2 {
-    /* font-size: 25px; */
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 10px;
   }
 
   .about-container .about-text p {
     font-size: 1rem;
-    /* text-align: center; */
+    text-align: justify;
+    margin-top: 10px;
+  }
+
+  /* .about-container .about-img {
+    justify-content: center;  // remove these rules //
+  } */
+
+  /* .about-container .about-text h2 { // remove these rules //
+    // font-size: 25px; //
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+  } */
+
+  /* .about-container .about-text p { // remove these rules //
+    font-size: 1rem;
+    // text-align: center; //
     text-align: justify;
 
     margin-top: 10px;
     letter-spacing: 1px;
-  }
+  } */
 
   /* Skills Page */
 
-  .skills-section h1 {
+  /* .skills-section h1 {
     font-size: 1.8rem;
-  }
+  } */
 
   .skills-text {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     text-align: justify;
   }
 
   .skills-section .skills-content {
-    display: grid;
+    /* display: grid; */ /* remove this */
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Add this */
   }
 
-  .skills-section .skills-content .skills-cards .item {
+  /* .skills-section .skills-content .skills-cards .item {
     background-color: #222831;
     margin: 20px;
     padding: 1rem;
@@ -790,33 +927,36 @@ footer * {
     width: 100%;
     height: 28px;
     border-radius: 15px;
-  }
+  } */
 
   /* Portfolio Page */
 
-  .portfolio h1 {
+  /* .portfolio h1 {
     font-size: 1.8rem;
-  }
+  } */
 
-  .portfolio-text {
+  /* .portfolio-text {
     font-size: 1rem;
-  }
+  } */
 
   .portfolio-cards {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 1.5rem; /* changed the value from 0.5rem to 1.5rem */
     width: 100%;
+    /* height: 100%; */
+    max-width: 600px; /* remove this */
+    margin: 0 auto;
   }
 
-  .portfolio-cards .item {
+  /* .portfolio-cards .item {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* min-height: 420px; */
-  }
+    // min-height: 420px; //
+  } */
 
-  .portfolio .portfolio-cards h3 {
+  /* .portfolio .portfolio-cards h3 {
     font-size: 1.1rem;
     margin: 0 0 10px;
   }
@@ -828,25 +968,49 @@ footer * {
     text-align: left;
     letter-spacing: normal;
     word-spacing: normal;
-  }
+  } */
 
   /* Contact Me Page */
 
-  .contact h1 {
+  /* .contact h1 {
     font-size: 1.8rem;
-  }
-  .contact-me-text {
+  } */
+  /* .contact-me-text {
     font-size: 1rem;
-  }
+  } */
 
   .contact-container {
-    width: 700px;
-    margin: auto;
-    padding: 0 2rem;
+    /* remove this rules */
+    /* width: 700px;
+    margin: auto; */
+    padding: 0 1rem; /* Changed the horizontal value from 2rem 1rem */
   }
   .contact .contact-content {
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    /* Add these rules */
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+    /* remove these rules */
+    /* margin-top: 2rem;
+    font-size: 0.9rem; */
+    /*  */
+  }
+
+  /* Add this rules */
+  /* .contact .contact-content img {
+    max-width: 300px;
+    margin: 0 auto 2rem;
+  } */
+
+  .flash-message {
+    margin: 0 auto 20px; /* Changed margin-bottom: 20px to margin: 0 auto 20px */
+
+    left: 50%;
+    right: 50%;
+    transform: translateX(
+      -50%
+    ); /* Changed transform: translate(-50%, -50%) to translateX(-50%) */
+
+    /* animation-delay: 5s; */ /* remove this */
   }
 }
 
