@@ -466,7 +466,7 @@ html {
 /* Portfolio disabled-button styling  */
 
 .btn-portfolio-disabled {
-  background: linear-gradient(to right, #eeeeee, #393e46);
+  background: linear-gradient(to left, #00adb5, #222831);
   color: #fff;
   padding: 8px 30px;
   margin-top: 30px;
@@ -477,6 +477,7 @@ html {
   /* transition: all 0.3s ease; */ /* remove this rule */
   cursor: not-allowed;
   display: inline-block;
+  opacity: 0.5; /* Add this */
 }
 
 .status-bar {
@@ -680,9 +681,9 @@ select {
 }
 
 .error {
-  color: #dc3545; /* Changed the color: red and the margin from -15 to -10 */
+  color: #dc3545; /* Changed the color: red and the margin-top from -15 to -10 */
   font-size: 0.9rem;
-  margin-top: -15px;
+  margin-top: -10px;
   margin-bottom: 15px;
   display: block; /* Add this */
 }
@@ -855,6 +856,8 @@ footer * {
     grid-template-columns: 1fr;
     text-align: center;
   }
+  /*  */
+
   .about-section .h1-about-me {
     /* font-size: 30px; */
     font-size: 1.8rem;
@@ -864,6 +867,14 @@ footer * {
   .about-container .about-img {
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
+  }
+  /*  */
+
+  .about-container .about-img img {
+    max-width: 300px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .about-container .about-text p {
@@ -921,13 +932,17 @@ footer * {
   .skills-section img {
     width: 150px;
     margin-bottom: 1rem;
-  }
+  }*/
 
   .progress-container {
     width: 100%;
     height: 28px;
     border-radius: 15px;
-  } */
+  }
+
+  .progress-bar {
+    border-radius: 15px;
+  }
 
   /* Portfolio Page */
 
@@ -987,7 +1002,7 @@ footer * {
   }
   .contact .contact-content {
     /* Add these rules */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     padding: 1.5rem;
     /* remove these rules */
     /* margin-top: 2rem;
@@ -995,11 +1010,11 @@ footer * {
     /*  */
   }
 
-  /* Add this rules */
-  /* .contact .contact-content img {
+  /*  Check this later - Add this rules */
+  .contact .contact-content img {
     max-width: 300px;
     margin: 0 auto 2rem;
-  } */
+  }
 
   .flash-message {
     margin: 0 auto 20px; /* Changed margin-bottom: 20px to margin: 0 auto 20px */
@@ -1012,42 +1027,105 @@ footer * {
 
     /* animation-delay: 5s; */ /* remove this */
   }
+  /* 
+  .flash-message {
+    width: 90%;
+    max-width: 528px;
+    margin: 0 auto 0 50%;
+    text-align: center;
+  } */
 }
 
 /* Mobile Responsive */
 
 @media (max-width: 528px) {
   /* Header Styling  */
-  .header-container {
+  .nav-link {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+  /* .header-container {
     flex-wrap: nowrap;
     text-wrap: nowrap;
-  }
+  } */
 
   /* Hero Section Styling */
 
   .hero-content h1 {
-    font-size: 22px;
+    font-size: 1.8rem;
   }
 
-  .hero-content p {
-    font-size: 15px;
+  .hero-container .hero-image {
+    display: flex;
+    /* align-items: center; */ /* remove this */
+    justify-content: center;
+    /* width: 100%; */ /* remove this */
+    margin-top: 0.5rem; /* Add this */
   }
-
   .hero-container .hero-image img {
+    max-width: 250px;
+    /* width: 100%; */
+    height: auto;
+    /* align-items: center;
+    align-content: center;
+    justify-content: center; */
+    /* margin: auto;
+    margin-top: 20px; */
+    /* object-fit: contain; */
+  }
+  /* .hero-content h1 {
+    font-size: 22px;
+  } */
+
+  /* .hero-content p {
+    font-size: 15px;
+  } */
+
+  /* .hero-container .hero-image img {
     max-width: 200px;
     justify-content: center;
     align-items: center;
-  }
-  .btn-primary {
+  } */
+  /* .btn-primary {
     font-size: 15px;
-  }
+  } */
 
   /* About page  */
+
+  .about-container {
+    /* Add these rules */
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  /*  */
 
   .about-section .h1-about-me {
     /* font-size: 30px; */
     font-size: 1.5rem;
   }
+
+  /* Added these rules */
+  .about-container .about-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  /*  */
+
+  .about-container .about-text p {
+    font-size: 0.9rem;
+    text-align: justify;
+    margin-top: 10px;
+  }
+
+  /*
+  .about-section .h1-about-me {
+    
+    font-size: 1.5rem; // font-size: 30px; //
+  }*/
 
   /* .about-container {
     display: flex;
@@ -1055,27 +1133,27 @@ footer * {
     width: 100%;
   } */
 
-  .about-container .about-img img {
+  /* .about-container .about-img img {
     justify-content: center;
     max-width: 200px;
-  }
+  } */
 
-  .about-container .about-text h2 {
-    /* font-size: 25px; */
+  /* .about-container .about-text h2 {
+    // font-size: 25px; //
     font-size: 1.2rem;
     text-align: center;
     margin-top: 10px;
-  }
+  } */
 
-  .about-container .about-text p {
+  /* .about-container .about-text p {
     font-size: 0.9rem;
-    /* text-align: center; */
+    // text-align: center; //
     text-align: justify;
     letter-spacing: normal;
     word-spacing: normal;
     margin-top: 10px;
-    /* letter-spacing: 1px; */
-  }
+    // letter-spacing: 1px; //
+  } */
 
   /* Skills Page */
 
@@ -1091,29 +1169,30 @@ footer * {
   }
 
   .skills-section .skills-content {
-    display: grid;
     grid-template-columns: 1fr;
   }
 
   .skills-section .skills-content .skills-cards .item {
-    background-color: #222831;
+    /* background-color: #222831; */
     margin: 20px;
-    padding: 1rem;
-    width: 250px;
-    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
     font-size: 15px;
   }
 
-  .skills-section img {
+  /* .skills-section img {
     width: 150px;
     margin-bottom: 1rem;
-  }
+  } */
 
-  .progress-container {
+  /* .progress-container {
     width: 100%;
     height: 28px;
     border-radius: 15px;
-  }
+  } */
 
   /* Portfolio Page */
 
@@ -1122,28 +1201,54 @@ footer * {
   }
 
   .portfolio-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: justify;
   }
 
   .portfolio-cards {
-    display: grid;
     grid-template-columns: 1fr;
   }
 
-  .portfolio-cards .item {
+  .portfolio .portfolio-cards .item-content {
+    gap: 10px;
+  }
+
+  /* Added this rules to .portfolio img */
+  .portfolio img {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  /* The above block of code is just been created  */
+
+  .portfolio .portfolio-cards p {
+    font-size: 0.9rem; /* Added this property*/
+  }
+
+  .status-bar {
+    margin-bottom: 10px; /* Add this rule */
+  }
+
+  .btn-portfolio,
+  .btn-portfolio-disabled {
+    margin-top: 10px;
+  }
+
+  /* .portfolio-cards .item {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
-    /* min-height: 420px; */
-  }
+    // min-height: 420px; //
+  } */
 
-  .portfolio .portfolio-cards h3 {
+  /* .portfolio .portfolio-cards h3 {
     font-size: 1rem;
     margin: 0 0 10px;
-  }
-  .portfolio .portfolio-cards .item-content p {
+  } */
+
+  /* .portfolio .portfolio-cards .item-content p {
     font-size: 0.9rem;
     height: 100px;
     width: 295px;
@@ -1152,11 +1257,11 @@ footer * {
     text-align: left;
     letter-spacing: normal;
     word-spacing: normal;
-  }
+  } */
 
-  .portfolio-cards .item img {
+  /* .portfolio-cards .item img {
     width: 200px;
-  }
+  } */
 
   /* Contact Me Page */
 
@@ -1165,25 +1270,45 @@ footer * {
   }
   .contact-me-text {
     font-size: 0.9rem;
+    text-align: justify;
   }
 
   .contact-container {
+    /* remove this rules */
+    /* width: 700px;
+    margin: auto; */
+    padding: 0 1rem; /* Changed the horizontal value from 2rem 1rem */
+  }
+  .contact .contact-content {
+    /* Add these rules */
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1.5rem;
+    /* remove these rules */
+    /* margin-top: 2rem;
+    font-size: 0.9rem; */
+    /*  */
+  }
+
+  /* .contact-container {
     width: 400px;
     margin: auto;
     padding: 0 2rem;
-  }
-  .contact .contact-content {
+  } */
+  /* .contact .contact-content {
     margin-top: 2rem;
     font-size: 0.9rem;
     display: grid;
     grid-template-columns: 1fr;
-  }
+  } */
 
   .contact-content img {
     display: none;
   }
 
   .flash-message {
+    width: 90%;
+    max-width: 528px;
+    margin: 0 auto 0 50%;
     text-align: center;
   }
 }
