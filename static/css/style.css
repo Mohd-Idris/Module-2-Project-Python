@@ -1,4 +1,4 @@
-/* Styling structure */
+/* Styling Basic Structure */
 
 * {
   margin: 0;
@@ -18,40 +18,42 @@ html {
 /* any container should have these rules */
 
 .container {
-  /* max-width: 1100px; */
-  margin: auto;
-  padding: 0 2rem;
-
-  /* Added these two rules for proper centering */
   width: 100%;
   max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
 }
 
 .fa-solid {
+  /* fa-circle-check checked of flash message */
   color: #00adb5;
 }
 
 /* Header Styling  */
+/* ------------------------- */
+
+/* Header container style */
 .header-container {
+  background: #222831;
+  width: 100%;
+  padding: 20px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Added the full width for better responsiveness */
-  padding: 20px 5%; /* Changed horizontal padding from 10% to 5% for better responsiveness */
-  background: #222831;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* Logo is set to be clickable or redirect you to Home page when you click on the logo.   */
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  /* text-decoration: none; */
   color: #eeeeee;
 }
 
+/* This style will be applied for every page does has span as aprt of the page content. */
 .home-span,
 .about-span,
 .skills-span,
@@ -60,29 +62,33 @@ html {
   color: #00adb5;
 }
 
+/* This style applies when you hover over the Logo. */
 .logo a:hover {
   color: #00adb5;
   transition: 0.3s;
 }
+
+/* This style applies when you hover over the Logo's span. */
 .logo a .home-span:hover {
   color: #eeeeee;
   transition: 0.3s;
 }
 
-.nav-link,
-.logo {
-  /* Removed the .logo  */
+/* This style applies on the entire links. */
+.nav-link {
   display: flex;
   gap: 30px;
   align-items: center;
-  flex-wrap: wrap; /* Make the links wrapple */
+  flex-wrap: wrap;
 }
 
+/* This style applies on each link should have these rules. */
 .nav-link a {
   font-weight: 300;
   color: #eeeeee;
 }
 
+/* This style applies when you hover over the navigation links. */
 .nav-link a:hover {
   font-weight: 500;
   color: #00adb5;
@@ -91,232 +97,233 @@ html {
   transform: scale(1.02);
 }
 
-/* Hero Section Styling */
+/* End of the Header Styling */
+/* ------------------------- */
+
+/* Home Page Hero Section Styling */
+/* ------------------------- */
+
+/* Home page Hero section style. */
 .hero-section {
-  padding: 60px 5%; /* change horizontal padding from 10% to 5% and the vertical padding from 80px to 60px for better responsiveness */
   background-color: #00acb534;
   width: 100%;
-  min-height: 70vh; /* change height property to min-height property and Added width: 100% for better responsiveness */
+  min-height: 70vh;
+  padding: 60px 5%;
 }
 
+/* Hero container style. */
 .hero-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px; /* change gap property value to 40px Added max-width: 1100px, and margin: 0 auto for better responsiveness */
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   align-items: center;
 }
+
+/* Hero title style. */
 .hero-content h1 {
-  /* font-size: 3rem; */
-  font-size: clamp(2rem, 4vm, 3rem); /* Make the font size responsive */
+  font-size: clamp(2rem, 4vm, 3rem);
   line-height: 1.2;
   margin-bottom: 20px;
   color: #222831;
 }
 
+/* Hero paragraph style */
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: #222831;
 }
 
+/* Hero button style */
 .btn-primary,
 .btn-secondary {
-  display: inline-block; /* Added inline-block displaying  */
   background: #00adb5;
   padding: 12px 25px;
-  border-radius: 5px;
-  margin-right: 15px;
-  margin-bottom: 10px; /* Added margin bottom and center aligning */
-  text-align: center;
+  margin: 0 15px 10px 0;
   color: #eee;
+  display: inline-block;
+  border-radius: 25px;
+  text-align: center;
 }
 
+/* This style applies when you hover over the Hero's button. */
 .btn-primary:hover,
 .btn-secondary:hover {
-  transition: all 0.3s ease;
   background: linear-gradient(to left, #00adb5, #222831);
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
-/* .hero-image {
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-} */
+
+/* Home page image style */
 .hero-image img {
-  width: 100%; /* Changed width from 60vh, height from 50vh, and added max-width to make it responsive on different screens, as well as chaned the object-fit to from fill to cover  */
+  width: 100%;
   max-width: 450px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
+/* End of the Home Page Header Styling */
+/* ------------------------- */
 
-/* .header-content img {
-  max-width: 450px;
-  border-radius: 50%;
-  border: 1px solid white;
-}
+/* About Me Page styling */
+/* ------------------------- */
 
-.header-content .content-text {
-  margin-bottom: 5rem;
-}
-
-.header-content .content-text .btn-aboutMe:hover {
-  transform: scale(1.1);
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: underline;
-} */
-
-/* About Me Section styling */
+/* About Me section style. */
 .about-section {
-  padding: 4rem 5%; /* Changed horizontal padding from 5rem to 5% for better responsiveness */
   background-color: #00acb534;
+  padding: 4rem 5%;
   margin: auto;
 }
 
+/* About Me container style. */
+.about-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* About Me title style. */
 .about-section h1 {
   text-align: center;
-  font-size: 2.5rem;
-  /* font-size: clamp(1.8rem, 3vm, 2.5rem); */ /* Make the font size responsive */
+  font-size: clamp(1.8rem, 3vm, 2.5rem);
   margin-bottom: 3rem;
   text-decoration: underline;
 }
 
+/* This style will be applied for About Me's span. */
 .about-section h1 .about-span {
   color: #00adb5;
 }
 
-.about-container {
-  display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  gap: 2rem; /* Make the gap bigger instead of 1rem , make it 2rem, added max-width and margin properties , also removed justify-content property */
-  max-width: 1100px;
-  margin: 0 auto;
-  /* justify-content: center; */
-  align-items: center;
-}
-
-.about-img img {
-  width: 100%; /* Changed width from 300px, added height and max-width to make it responsive on different screens, awa removed order property */
-  max-width: 300px;
-  height: auto;
-  border-radius: 30px;
-  /* order: 10; */
-}
-
+/* About me sub-title style. */
 .about-text h2 {
+  font-size: clamp(1.3rem, 2vm, 1.8rem);
   margin-bottom: 1rem;
   color: #222;
-  /* font-size: clamp(1.3rem, 2vm, 1.8rem); */ /* Added the font size responsive */
 }
 
+/* About me paragraph style. */
 .about-text p {
   margin-bottom: 0.8rem;
   font-size: 1.05rem;
   line-height: 1.7;
 }
-
-/* Skills Section styling */
-
-.skills-section {
-  padding: 4rem 5%; /* Changed horizontal padding from 5rem to 5% for better responsiveness, Added width property */
+/* About me image style. */
+.about-img img {
   width: 100%;
-  background-color: #00acb534;
+  max-width: 300px;
+  height: auto;
+  border-radius: 30px;
 }
 
+/* End of the About Me Page Styling */
+/* ------------------------- */
+
+/* Skills Page styling */
+/* ------------------------- */
+
+/* Skills section style. */
+.skills-section {
+  background-color: #00acb534;
+  padding: 4rem 5%;
+  width: 100%;
+}
+
+/* Skills title style. */
 .skills-section h1 {
   text-align: center;
-  /* font-size: 2.5rem; */
-  font-size: clamp(1.8rem, 3vm, 2.5rem); /* Added the font size responsive */
+  font-size: clamp(1.8rem, 3vm, 2.5rem);
   margin-bottom: 0.5rem;
   text-decoration: underline;
 }
+
+/* This style will be applied for Skills's span. */
 .skills-section h1 .skills-span {
   color: #00adb5;
 }
 
+/* Skills paragraph style. */
 .skills-text {
-  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
   font-size: 1.1rem;
-  margin-bottom: 2rem; /* Changed margin bottom value from 1.5 to 2rem */
-  max-width: 800px; /* Added the max-width, margin left and right properties responsive */
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
 }
 
+/* Skills content style */
 .skills-section .skills-content {
-  margin-top: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem; /* Added the gap , max-width, margin left and right properties responsive */
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-
-  /* align-items: center;
-  text-align: center; */
+  gap: 2rem;
 }
 
+/* Skills style for the card content */
 .skills-section .skills-content .skills-cards {
-  text-align: center; /* Added text align, and removed align content and justify content properties */
-  /* align-content: center;
-  justify-content: center; */
-  /* color: white; */
+  text-align: center;
   color: #393e46;
 }
 
+/* Skills style for the item inside the card */
 .skills-section .skills-content .skills-cards .item {
   background-color: #00acb587;
-
-  margin: 0 auto; /* changed margin from 20px, and width from 300px, then added padding 1.5rem vertically 1rem horizontally ,max-width intead of width */
-  padding: 1.5rem 1rem;
   width: 100%;
   max-width: 300px;
-
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
   border-radius: 20px;
   font-size: 18px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
 
+/* This style applies when you hover over the Skills' card. */
 .skills-section .skills-content .skills-cards .item:hover {
   box-shadow: 5px 5px #365486;
 }
+
+/* Skills card's image style */
 .skills-section img {
-  width: 100%; /* Added max-width and height , change width value from 150px to 100%*/
+  width: 100%;
   max-width: 150px;
   height: auto;
   object-fit: contain;
   margin-bottom: 1rem;
 }
 
-.progress-container {
+/* Skills progress-bar's container style */
+.progress-bar-container {
+  background-color: #e9e9e9;
   width: 100%;
   height: 28px;
-  background-color: #e9e9e9;
-  border-radius: 15px;
   margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
+/* Skills progress-bar's style */
 .progress-bar {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* color: #fff; */
   color: #393e46;
   font-weight: 600;
-  /* text-align: center; */ /* remove this property */
   border-radius: 15px;
   transition: width 0.6s ease;
-  /* z-index: 9; */ /*remove this property */
 }
 
+/* These are the colours level based on the each level on a certain skills */
 .progress-bar.high {
   background: #28a745;
 }
@@ -339,147 +346,105 @@ html {
 
 .progress-bar.zero {
   background: #6c757d;
-
   width: 0% !important;
 }
+/* End of the Skills Page Styling */
+/* ------------------------- */
 
-/* Portfolio Section styling */
+/* Portfolio Page styling */
+/* ------------------------- */
 
-.portfolio {
+/* Portfolio section style. */
+.portfolio-section {
   background-color: #00acb534;
-  padding: 4rem 5%; /* Changed horizontal padding from 5rem to 5% for better responsiveness, Added width property */
   width: 100%;
+  padding: 4rem 5%;
 }
 
-.portfolio h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-size: clamp(1.8rem, 3vm, 2.5rem); /* Added the font size responsive */
+/* Portfolio title style. */
+.portfolio-section h1 {
+  font-size: clamp(1.8rem, 3vm, 2.5rem);
   margin-bottom: 0.5rem;
+  text-align: center;
   text-decoration: underline;
 }
 
+/* Portfolio paragraph style. */
 .portfolio-text {
   text-align: justify;
   max-width: 800px;
   margin: 0 auto 40px;
 }
 
+/* Portfolio style for the card content */
 .portfolio-cards {
+  max-width: 1100px;
+  margin: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 1100px; /* Added max-width and margin */
-  margin: 4rem;
-  /* justify-content: center;*/ /* remove this property */
-  /*align-items: center; */ /* remove this property */
-  /*margin-top: 4rem; */ /* remove this property */
 }
 
-.portfolio .item {
+/* Portfolio style for the item inside the card */
+.portfolio-section .item {
   background-color: #393e46;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-
-  height: 100%; /* Added height , display flex, and flex direction */
+  height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-.portfolio .item:hover {
+/* This style applies when you hover over the Portfolio's card. */
+.portfolio-section .item:hover {
   transform: scale(1.03);
   box-shadow: 5px 5px #00adb5;
 }
 
-/* Added this rules to .portfolio img */
-.portfolio img {
+/* portfolio card's image style */
+.portfolio-section img {
   width: 100%;
   height: auto;
   padding: 0.8rem;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
 }
-/* The above block of code is just been created  */
 
-.portfolio .portfolio-cards .item .item-content {
+/* Portfolio style for all items inside the card except the image. */
+.portfolio-section .portfolio-cards .item .item-content {
   color: #eee;
   padding: 20px 15px 30px;
-  /* align-items: center; */ /* remove this property */
-  text-align: center;
-  /* Added these rules below */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  /* The above block of code is just been created  */
+  text-align: center;
 }
 
-.portfolio .portfolio-cards h3 {
+/* Porfolio sub-title inside the card style */
+.portfolio-section .portfolio-cards h3 {
+  margin: 0 0 10px;
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 10px;
-  /* text-align: center; */ /* remove this property */
   color: #eee;
 }
 
+/* Portfolio sub-title's span sytle */
 .span-portfolio-item {
   background: linear-gradient(to left, #00adb5, #eeeeee24);
+  padding: 0 15px;
 }
 
-.portfolio .portfolio-cards p {
-  font-size: 1rem; /* Added this property*/
-  line-height: 1.7;
-  font-weight: 400;
+/* Portfolio paragraph sytle */
+.portfolio-section .portfolio-cards p {
   padding: 0 10px;
   margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-/* remove this rule */
-/* .portfolio img {
-  max-width: 100%;
-  padding: 0.8rem;
-} */
-
-.btn-portfolio {
-  /* remove this line .portfolio .portfolio-cards .item-content .btn-portfolio write this instead */
-  background: linear-gradient(to left, #00adb5, #222831);
-  color: #fff;
-  padding: 8px 30px;
-  margin-top: 30px;
-  font-size: 14px;
-  /* text-align: center; */ /* remove this rule */
-  border: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  display: inline-block;
-  /* text-decoration: none; */ /* Add this */
-}
-
-.btn-portfolio:hover {
-  transform: scale(1.1);
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-
-/* Portfolio disabled-button styling  */
-
-.btn-portfolio-disabled {
-  background: linear-gradient(to left, #00adb5, #222831);
-  color: #fff;
-  padding: 8px 30px;
-  margin-top: 30px;
-  font-size: 14px;
-  /* text-align: center; */ /* remove this rule */
-  border: none;
-  border-radius: 10px;
-  /* transition: all 0.3s ease; */ /* remove this rule */
-  cursor: not-allowed;
-  display: inline-block;
-  opacity: 0.5; /* Add this */
-}
-
+/* Portfoio Status-bar style  */
 .status-bar {
   display: flex;
   align-items: center;
@@ -487,11 +452,12 @@ html {
   padding: 5px 0;
   color: #fff;
   font-weight: 600;
-  /* text-align: center; */ /* remove this rule */
   border-radius: 20px;
   text-transform: uppercase;
-  margin-bottom: 1rem; /* Add this rule */
+  margin-bottom: 0.2rem;
 }
+
+/* These colours explain the status of the project */
 .status-bar.completed {
   background-color: #28a745;
 }
@@ -502,7 +468,39 @@ html {
   background-color: #dc3545;
 }
 
-/* Contact Me Section styling*/
+/* Portfolio buttons style */
+.btn-portfolio,
+.btn-portfolio-disabled {
+  background: linear-gradient(to left, #00adb5, #222831);
+  color: #fff;
+  padding: 8px 30px;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 14px;
+  border: 0.2px solid white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* This style applies when you hover over the Portfolio buttons */
+.btn-portfolio:hover {
+  transform: scale(1.1);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* Portfolio disabled-button styling  */
+.btn-portfolio-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* End of the Portfolio Page Styling */
+/* ------------------------- */
+
+/* Contact Me Page styling */
+/* ------------------------- */
 
 .contact {
   background-color: #00acb534;
